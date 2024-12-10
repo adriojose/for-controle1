@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+    // Entrada: Nome dos 3 candidatos
+let candidato1 = prompt("Informe o nome do primeiro candidato:");
+let candidato2 = prompt("Informe o nome do segundo candidato:");
+let candidato3 = prompt("Informe o nome do terceiro candidato:");
+
+// Entrada: Quantidade de alunos votantes
+let numeroDeAlunos = Number(prompt("Informe a quantidade de alunos votantes:"));
+
+// Inicialização dos votos
+let votosCandidato1 = 0;
+let votosCandidato2 = 0;
+let votosCandidato3 = 0;
+
+// Processamento: Coleta de votos
+for (let i = 1; i <= numeroDeAlunos; i++) {
+    let voto = prompt(`Aluno ${i}, digite o número do candidato em quem você vai votar:\n1 - ${candidato1}\n2 - ${candidato2}\n3 - ${candidato3}`);
+    
+    // Verifica o voto e incrementa a contagem do candidato correspondente
+    if (voto == '1') {
+        votosCandidato1++;
+    } else if (voto == '2') {
+        votosCandidato2++;
+    } else if (voto == '3') {
+        votosCandidato3++;
+    } else {
+        alert("Voto inválido. Nenhum voto será computado.");
+    }
+}
+
+// Cálculo das porcentagens
+let porcentagem1 = (votosCandidato1 / numeroDeAlunos) * 100;
+let porcentagem2 = (votosCandidato2 / numeroDeAlunos) * 100;
+let porcentagem3 = (votosCandidato3 / numeroDeAlunos) * 100;
+
+// Exibe o resultado da votação
+alert(`Resultado da votação:${candidato1} - ${votosCandidato1} votos (${porcentagem1.toFixed(2)}%)${candidato2} - ${votosCandidato2} votos (${porcentagem2.toFixed(2)}%)${candidato3} - ${votosCandidato3} votos (${porcentagem3.toFixed(2)}%)`);
+
+
+    //PROCESSAMENTO
+
+
+    //SAÍDA
+
+</script>

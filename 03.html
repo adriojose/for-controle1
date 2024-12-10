@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Faça um programa que peça ao usuário para informar cinco números.
+    No final, apresente o maior número informado pelo usuário.
+    */
+
+    //ENTRADA
+    let maiorNumero = -Infinity;
+
+    
+    for (let i = 0; i < 5; i++) {
+        let numero = parseFloat(prompt("Informe um número:"));
+        
+        
+        if (numero > maiorNumero) {
+            maiorNumero = numero;
+        }
+    }
+
+    
+    alert(`O maior número informado foi: ${maiorNumero}`);
+
+    //PROCESSAMENTO
+
+
+    //SAÍDA
+
+</script>
